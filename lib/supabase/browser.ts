@@ -1,6 +1,5 @@
 
 'use client';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { createClient } from '@supabase/supabase-js';
 
 // Simple browser client using anon key
