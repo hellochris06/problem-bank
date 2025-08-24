@@ -12,7 +12,7 @@ export default async function ProblemsPage({ searchParams }: { searchParams: { q
 
   let query = supabase.from('problems').select('id,title,category,difficulty,created_at').order('created_at', { ascending: false });
 
-  if (q) query = query.ilike('title', f'%{q}%');
+  if (q) query = query.ilike('title', `%${q}%`);
   if (category) query = query.eq('category', category);
   if (diff) query = query.eq('difficulty', Number(diff));
 
